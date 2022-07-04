@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Mengyang Li <ubedcoy@online.sch.id>
+MAINTAINER ubed <ubedcoy@online.sch.id>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
@@ -13,7 +13,7 @@ RUN apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
-ADD run.sh /root/build.sh
+ADD build.sh /root/build.sh
 
 EXPOSE 8080
 WORKDIR /root
